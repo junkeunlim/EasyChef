@@ -1,0 +1,5 @@
+Recipes/__pycache__/
+Recipes/migrations/
+accounts/__pycache__/
+accounts/migrations/
+p2/__pycache__

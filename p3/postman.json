@@ -1,0 +1,913 @@
+{
+	"info": {
+		"_postman_id": "e3cd4153-92c1-4915-bf60-d080ab516ceb",
+		"name": "CSC309 P2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25915721"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"student\",\n    \"password\": \"password\",\n    \"email\": \"student@mail.utoronto.ca\",\n    \"first_name\": \"Student\",\n    \"last_name\": \"UTM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/accounts/signup/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"student\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/accounts/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/accounts/profile/view/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile",
+						"view",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\",\n\"first_name\": \"new_Student\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/accounts/profile/edit/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile",
+						"edit",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add recipe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\",\n\"name\": \"Rice\",\n\"description\": \"its a rice\",\n\"cuisine\": \"J\",\n\"ingredients\": [{\"name\": \"rice\", \"quantity\": 1}],\n\"servings\": 1,\n\"steps\": \"You cook a rice\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/add/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"add",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete recipe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/1/delete/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"1",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add recipe again",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\",\n\"name\": \"Rice\",\n\"description\": \"its a rice\",\n\"cuisine\": \"J\",\n\"ingredients\": [{\"name\": \"rice\", \"quantity\": 1}],\n\"servings\": 1,\n\"steps\": \"You cook a rice\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/add/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"add",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view all recipes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "my recipes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/myrecipes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"myrecipes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit recipe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\",\n\"name\": \"new_rice\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/2/edit/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"2",
+						"edit",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view recipe details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/2/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "like recipe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/2/like/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"2",
+						"like",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unlike recipe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/2/unlike/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"2",
+						"unlike",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search recipe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"new_rice\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/search/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"search",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "servings/changing quantity of ingredients",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\",\n    \"servings\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/2/servings/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"2",
+						"servings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add shopping list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\",\n    \"recipe_name\": \"new_rice\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/shoppinglist/add/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"shoppinglist",
+						"add",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get shopping list/ view",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/shoppinglist/view/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"shoppinglist",
+						"view",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\",\n    \"review\": \"so good\",\n    \"rating\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/2/addreview/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"2",
+						"addreview",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view reviews",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/2/reviews/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"2",
+						"reviews",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\",\n    \"rating\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/2/editreview/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"2",
+						"editreview",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recipes/2/deletereview/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recipes",
+						"2",
+						"deletereview",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc4OTI4MTk0LCJpYXQiOjE2Nzg4NDE3OTQsImp0aSI6IjEyNTFkM2VhMTAwNDQ0ZDE5ZmJiM2Y0MTFhZjgxYzdmIiwidXNlcl9pZCI6MX0.lA3sx46cuybT9G_Bi66RfDk8WqzqumUt5BrXpUjkMIs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3ODkyODE5NCwiaWF0IjoxNjc4ODQxNzk0LCJqdGkiOiIwYWFiNmZhZWIxNTA0NDU2YTA4MmQ2YmU5YTVkMjYzZCIsInVzZXJfaWQiOjF9.tinOaI6szWusR_UShL_xnGpFtI6_rBWyFSdCCUKvkwU\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/accounts/logout/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
